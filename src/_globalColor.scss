@@ -3,8 +3,10 @@ Certain colors are used for different and multiply types of elements.
 For greater control over colors visit each components .scss file. */
 
 // button colors
-$buttonColor: #55198b;
-$buttonHover: #8c43ce;
+$buttonColorLight: #07080c;
+$buttonColorDark: #ffffff;
+$buttonColor: #07080c;
+$buttonHover: #676668;
 $topButtonHover: #000;
 
 // text colors light theme
@@ -17,10 +19,11 @@ $blogCardTitleColor: #262626;
 
 // text color dark theme
 $textColorDark: #ffffff;
+$textColorLight: #07080c;
 
 // toggle switch colors
-$toggleCheck: #2196f3;
-$toggleSwitchSliderBG: #ccc;
+$toggleCheck: #ffffff;
+$toggleSwitchSliderBG: #07080c;
 
 // githubRepo specific colors
 $githubRepoCardLanguageColorBG: #0000ff;
@@ -36,7 +39,7 @@ $lightBackground2: rgb(255, 255, 255);
 $lightBackground3: #f5f2f4;
 $blogCardContainerColor: #586069;
 // dark background colors
-$darkBackground: #171c28;
+$darkBackground: #07080c;
 
 // light theme box shadows
 $lightBoxShadowDark: rgba(0, 0, 0, 0.2);
@@ -65,7 +68,7 @@ $educationCardBorder: #a9a7f9;
 // hovers
 $achievementCertificateCardHoverDark: rgba(255, 255, 255, 0.2);
 $blogCardHoverSmallColor: rgba(255, 255, 255, 0.8);
-$headerHoverBG: #f4f4f4;
+$headerHoverBG: #07080c;
 $contactDetailHoverTS: #b5b5b5;
 
 // misc backgrounds

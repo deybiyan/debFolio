@@ -36,10 +36,40 @@
 
 .button-greeting-div {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
   margin-top: 40px;
 }
 .download-link-button {
   text-decoration: none;
+}
+
+.button-greeting-div > div,
+.download-link-button {
+  flex: 0 1 auto;
+}
+
+.button-greeting-div .main-button {
+  margin-top: 0;
+  margin-right: 0;
+  min-width: 220px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.button-greeting-div .main-button,
+.button-greeting-div .main-button:hover {
+  background-color: $buttonColorLight;
+  border-color: $buttonColorLight;
+  color: $textColorDark;
+}
+
+.dark-mode.button-greeting-div .main-button,
+.dark-mode.button-greeting-div .main-button:hover {
+  background-color: $buttonColorDark;
+  border-color: $buttonColorDark;
+  color: $textColorLight;
 }
 
 .greeting-text {
@@ -53,9 +83,19 @@
   line-height: 40px;
 }
 
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .greeting-image-div > img {
+  padding: 0 0 0 30px;
+  width: min(100%, 560px);
   max-width: 100%;
   height: auto;
+  max-height: 75vh;
+  object-fit: contain;
 }
 
 .wave-emoji {
@@ -98,10 +138,14 @@
   .greeting-text-p {
     font-size: 20px;
   }
+  .greeting-image-div > img {
+    width: min(100%, 480px);
+    max-height: 65vh;
+  }
 }
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
   }
   .greeting-text {
     font-size: 30px;
@@ -115,8 +159,37 @@
   .greeting-main {
     display: block;
   }
+  .button-greeting-div .main-button {
+    width: min(100%, 280px);
+    min-width: 200px;
+    text-align: center;
+  }
   .greeting-image-div {
-    height: 256px;
+    margin-top: 10px;
+  }
+  .greeting-image-div > img {
+    padding: 0;
+    width: min(100%, 340px);
+    max-height: 45vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-greeting-div {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .button-greeting-div > div {
+    width: 100%;
+  }
+  .button-greeting-div .main-button {
+    width: 100%;
+    min-width: 0;
+  }
+  .greeting-image-div > img {
+    width: min(100%, 280px);
+    max-height: 40vh;
   }
 }
 

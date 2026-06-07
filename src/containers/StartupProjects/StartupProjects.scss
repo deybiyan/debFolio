@@ -1,9 +1,10 @@
 @import "../../_globalColor";
 
-.card-image {
-  max-width: 100%;
-  height: auto;
-  width: 250px;
+.project-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .card-title {
   color: $titleColor;
@@ -11,20 +12,36 @@
   line-height: 24px;
   font-weight: 700;
   margin: 15px 0 0 0;
+  min-height: 48px;
 }
 .card-subtitle {
   color: $cardSubtitle;
   font-size: 17px;
   line-height: 1.5rem;
+  margin: 0.75rem 0 1rem 0;
+  min-height: calc(1.5rem * 5);
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .project-card {
   display: flex;
   flex-direction: column;
   background-color: $lightBackground2;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid $buttonColor;
+  outline-offset: 2px;
 }
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
@@ -41,6 +58,9 @@
 }
 
 .project-detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   text-align: center;
 }
 .project-card-light:hover {
@@ -51,11 +71,21 @@
 }
 .project-image {
   position: relative;
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.project-card-footer {
+  margin-top: auto;
+  min-height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .projects-container {
@@ -64,9 +94,10 @@
   gap: 1rem 1rem;
 }
 
-.project-card-footer span.project-tag {
-  background: $buttonColor;
-  color: $lightBackground3;
+.project-card-footer span.project-tag,
+.project-modal-footer span.project-tag {
+  background: $buttonColorLight;
+  color: $textColorDark;
   vertical-align: middle;
   align-items: center;
   border-radius: 4px;
@@ -82,9 +113,186 @@
   transition: 0.2s ease-in;
 }
 
+.dark-mode .project-card-footer span.project-tag,
+.dark-mode .project-modal-footer span.project-tag {
+  background: $buttonColorDark !important;
+  color: $textColorLight !important;
+}
+
+.project-card-footer span.project-tag:hover,
+.project-modal-footer span.project-tag:hover {
+  // background: $buttonColorDark;
+  // color: $textColorLight;
+  transition: all 0.3s ease 0s;
+  transform: translateY(-3px);
+}
+
+.dark-mode .project-card-footer span.project-tag:hover,
+.dark-mode .project-modal-footer span.project-tag:hover {
+  // background: $buttonColorLight !important;
+  // color: $textColorDark !important;
+  transition: all 0.3s ease 0s;
+  transform: translateY(-3px);
+}
+
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(0.75rem, 2.5vw, 1.5rem);
+  background: rgba(10, 15, 28, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+.project-modal {
+  position: relative;
+  width: min(760px, 96vw);
+  max-height: min(90vh, calc(100dvh - 2rem));
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 12px;
+  padding: 1rem 1rem 1.1rem;
+  border: 1px solid $lightBorder1;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+}
+
+.project-modal::-webkit-scrollbar {
+  display: none;
+}
+
+.project-modal .card-title {
+  min-height: 0;
+  margin-right: 2.2rem;
+}
+
+.project-modal-light {
+  background: $lightBackground2;
+}
+
+.project-modal-dark {
+  background: $darkBackground;
+  border-color: $lightBorder1;
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  background: $buttonColor;
+  color: $textColorDark;
+}
+
+.project-modal-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-modal-description {
+  color: $cardSubtitle;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.75rem 0 1rem;
+}
+
+.project-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .project-modal {
+    width: min(700px, 95vw);
+    max-height: calc(100dvh - 2.25rem);
+  }
+
+  .project-modal-image-wrap {
+    aspect-ratio: 16 / 10;
+  }
+}
+
 @media (max-width: 768px) {
   .project-subtitle {
     font-size: 16px;
     text-align: center;
+  }
+
+  .project-modal-overlay {
+    padding: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .project-modal {
+    width: 100%;
+    max-height: calc(100dvh - 1.5rem);
+    border-radius: 10px;
+    padding: 0.9rem;
+  }
+
+  .project-modal .card-title {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .project-modal-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .project-modal-image-wrap {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .project-modal {
+    max-height: calc(100dvh - 1rem);
+    border-radius: 8px;
+    padding: 0.75rem;
+  }
+
+  .project-modal-close {
+    top: 0.45rem;
+    right: 0.45rem;
+    width: 1.85rem;
+    height: 1.85rem;
+  }
+
+  .project-modal .card-title {
+    font-size: 1.05rem;
+    margin-right: 2rem;
+  }
+
+  .project-modal-description {
+    font-size: 0.9rem;
+  }
+
+  .project-modal-footer {
+    justify-content: flex-start;
   }
 }

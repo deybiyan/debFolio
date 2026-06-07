@@ -23,6 +23,9 @@ export default function Contact() {
               }
             >
               {contactInfo.subtitle}
+              {/* <br /> */}
+              <br />
+              {contactInfo.subtext}
             </p>
             <div
               className={
@@ -57,8 +60,8 @@ export default function Contact() {
               <DisplayLottie animationData={email} />
             ) : (
               <img
-                alt="Man working"
-                src={require("../../assets/images/contactMailDark.svg")}
+                alt="Contact Me Illustration"
+                src={require("../../assets/images/contact-me.gif")}
               ></img>
             )}
           </div>

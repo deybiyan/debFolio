@@ -17,7 +17,7 @@
 }
 
 .dark-menu li a:hover {
-  background-color: $buttonColor !important;
+  background-color: transparent !important;
 }
 
 .header {
@@ -38,14 +38,66 @@
   color: $subTitle;
 }
 
-.header li a {
+.header li a[href] {
   display: block;
   padding: 15px 20px;
   color: $textColor;
   text-decoration: none;
+  position: relative;
 }
 
-.header li a:hover,
+.header li a[href]::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 8px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba($headerHoverBG, 0.35) 20%,
+    $headerHoverBG 80%,
+    transparent 100%
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s ease;
+}
+
+.dark-menu li a[href]::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba($textColorDark, 0.35) 20%,
+    $textColorDark 80%,
+    transparent 100%
+  );
+}
+
+.header li a[href]:hover,
+.header li a[href]:focus-visible {
+  background-color: transparent;
+}
+
+.header li a[href]:hover::after,
+.header li a[href]:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.header .header-toggle-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .header-toggle-item > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+}
+
 .header .menu-btn:hover {
   background-color: $headerHoverBG;
 }
@@ -61,11 +113,21 @@
 }
 
 .header .logo-name {
-  font-family: "Agustina Regular";
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
+}
+
+.header .logo,
+.header .logo:visited {
+  color: $textColor;
+}
+
+.dark-menu .logo,
+.dark-menu .logo:visited {
+  color: $textColorDark;
 }
 
 /* menu */
@@ -80,9 +142,13 @@
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   float: right;
-  padding: 28px 20px;
+  width: 58px;
+  height: 58px;
+  padding: 0;
   position: relative;
   user-select: none;
 }
@@ -160,9 +226,6 @@
 /* 48em = 768px */
 
 @media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
   .header {
     display: flex;
     align-items: center;
@@ -170,6 +233,25 @@
   }
   .header .menu {
     max-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 2px;
+    position: relative;
+    padding-right: 72px;
+  }
+  .header li {
+    float: none;
+  }
+  .header .header-toggle-item {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header .header-toggle-item > a {
+    padding: 8px 12px;
   }
   .header .menu-icon {
     display: none;

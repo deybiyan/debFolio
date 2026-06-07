@@ -8,7 +8,7 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 // Splash Screen
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false, // set false to disable splash screen
   animation: splashAnimation,
   duration: 2000 // Set animation duration as per your animation
 };
@@ -16,15 +16,15 @@ const splashScreen = {
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: false // Set to false to use static SVG
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
-  subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
-  ),
+  username: "daveIan",
+  title: "Hi, I'm Dave Ian",
+  subTitle: 
+    "Solution-Driven Software Engineer 🚀 with experience designing, developing, and supporting enterprise desktop and web applications. Skilled in C#, .NET, ASP.NET MVC, WPF, SQL Server, JavaScript, React, and modern web technologies, with a strong focus on building reliable, scalable, and user-friendly solutions."
+  ,
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -33,13 +33,13 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/deybiyan",
+  linkedin: "https://www.linkedin.com/in/dave-ian-olicia/",
+  gmail: "ianolicia@gmail.com",
+  gitlab: "https://gitlab.com/deybiyan",
+  facebook: "https://www.facebook.com/dave.ian.olicia",
+  medium: "https://medium.com/@daveianolicia",
+  stackoverflow: "https://stackoverflow.com/users/10422806/dave-ian-olicia",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -48,15 +48,18 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "Tech Stack",
+  subTitle: "Driven by curiosity and a passion for software engineering, I enjoy working across the entire development stack—from crafting intuitive user interfaces to building reliable backend systems.",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop modern, responsive, and accessible user experiences"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Build APIs and backend services with maintainability and performance in mind"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Work with cloud services, databases, and deployment pipelines"
+    ),
+     emoji(
+      "⚡ Explore emerging technologies and best practices to deliver better solutions"
     )
   ],
 
@@ -65,56 +68,93 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "Copilot",
+      iconUrl:"https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/github-copilot/default.svg"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "Ollama",
+      iconUrl:
+        "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/ollama/default.svg"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      skillName: "Azure OpenAI",
+      fontAwesomeClassname: "fab fa-openai"
+    },
+    {
+      skillName: "C#",
+      fontAwesomeClassname: "devicon-csharp-plain"
+    },
+    {
+      skillName: ".Net Core",
+      fontAwesomeClassname: "devicon-dotnetcore-plain"
+    },
+    {
+      skillName: "Entity Framework",
+      fontAwesomeClassname: "devicon-entityframeworkcore-plain"
+    },
+    {
+      skillName: "SQL",
+      fontAwesomeClassname: "devicon-microsoftsqlserver-plain"
+    },
+    {
+      skillName: "GraphQL",
+      iconUrl: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/graphql/default.svg"
+    },
+    {
+      skillName: "DatoCMS",
+      iconUrl: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/datocms/default.svg"
+    },
+    {
+      skillName: "Node.js",
+      fontAwesomeClassname: "fab fa-node"
+    },
+    {
+      skillName: "React",
+      fontAwesomeClassname: "fab fa-react"
     },
     {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      skillName: "Typescript",
+      fontAwesomeClassname: "fab fa-typescript"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "WinForms",
+      fontAwesomeClassname: "fab fa-windows"
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
+      skillName: "MSTest",
+      fontAwesomeClassname: "fas fa-vial"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "NUnit",
+      fontAwesomeClassname: "fas fa-check-double"
     },
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      skillName: "Playwright",
+      fontAwesomeClassname: "devicon-playwright-plain"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
+      skillName: "Azure Services",
+      fontAwesomeClassname: "devicon-azure-plain"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: "Azure DevOps",
+      fontAwesomeClassname: "devicon-azuredevops-plain"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      skillName: "IIS Hosting",
+      fontAwesomeClassname: "fas fa-network-wired"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git"
+    },
+    {
+      skillName: "GitHub",
+      fontAwesomeClassname: "fab fa-github"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -212,29 +252,41 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "A collection of projects I've designed, developed, and contributed to throughout my journey as a software engineer." ,
+  subtext: "Each project represents a unique challenge, an opportunity to learn, and a chance to build solutions that deliver real value to users and businesses.",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/fdmhub.gif"),
+      projectName: "FDM Hub",
+      projectDesc: "FDM Hub is a full-stack AI-powered diagnostic platform with an ASP.NET Core (.NET 10) API and a Next.js TypeScript frontend that ingests AMS workspace artifacts, stores ticket snapshot data, and evaluates compatibility rules against versioned matrix requirements.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "Internal Company Website",
+          // url: "http://fdmhub.com/" --- IGNORE ---
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/Persol.gif"),
+      projectName: "Persol Outsourcing Website",
+      projectDesc: "PERSOL Outsourcing is a leading outsourcing and managed services provider that delivers customer experience, corporate support, and technical solutions. By integrating people, processes, and technology, they help businesses streamline operations, enhance service delivery, and scale efficiently across diverse industries.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://nextu.se/"
+          url: "https://www.persoloutsourcing.com/"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/nextuLogo.webp"),
+      projectName: "TREX Data Collector",
+      projectDesc: "Windows Forms desktop application (targeting .NET 10) that collects and exports configuration data from AMS Trex Device Communicator, integrating with devices over a network and writing the results to structured output files. ",
+      footerLink: [
+        {
+          name: "Internal Company Tool",
+          // url: "http://nextu.se/" --- IGNORE ---
         }
       ]
     }
@@ -369,11 +421,13 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Let's Connect! ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+    "Let's build something great together.",
+  subtext:
+    "My inbox is always open for discussions, collaborations, and opportunities.",
+  number: "+63-967-319-0974",
+  email_address: "ianolicia@gmail.com"
 };
 
 // Twitter Section
@@ -383,7 +437,7 @@ const twitterDetails = {
   display: true // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,

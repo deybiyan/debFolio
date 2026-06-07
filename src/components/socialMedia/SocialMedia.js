@@ -44,7 +44,7 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.gitlab ? (
+      {/* {socialMediaLinks.gitlab ? (
         <a
           href={socialMediaLinks.gitlab}
           className="icon-button gitlab"
@@ -54,9 +54,9 @@ export default function socialMedia() {
           <i className="fab fa-gitlab"></i>
           <span></span>
         </a>
-      ) : null}
+      ) : null} */}
 
-      {socialMediaLinks.facebook ? (
+      {/* {socialMediaLinks.facebook ? (
         <a
           href={socialMediaLinks.facebook}
           className="icon-button facebook"
@@ -66,9 +66,9 @@ export default function socialMedia() {
           <i className="fab fa-facebook-f"></i>
           <span></span>
         </a>
-      ) : null}
+      ) : null} */}
 
-      {socialMediaLinks.instagram ? (
+      {/* {socialMediaLinks.instagram ? (
         <a
           href={socialMediaLinks.instagram}
           className="icon-button instagram"
@@ -90,9 +90,9 @@ export default function socialMedia() {
           <i className="fab fa-twitter"></i>
           <span></span>
         </a>
-      ) : null}
+      ) : null} */}
 
-      {socialMediaLinks.medium ? (
+      {/* {socialMediaLinks.medium ? (
         <a
           href={socialMediaLinks.medium}
           className="icon-button medium"
@@ -114,9 +114,9 @@ export default function socialMedia() {
           <i className="fab fa-stack-overflow"></i>
           <span></span>
         </a>
-      ) : null}
+      ) : null} */}
 
-      {socialMediaLinks.kaggle ? (
+      {/* {socialMediaLinks.kaggle ? (
         <a
           href={socialMediaLinks.kaggle}
           className="icon-button kaggle"
@@ -126,7 +126,7 @@ export default function socialMedia() {
           <i className="fab fa-kaggle"></i>
           <span></span>
         </a>
-      ) : null}
+      ) : null} */}
     </div>
   );
 }

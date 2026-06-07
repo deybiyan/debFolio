@@ -4,6 +4,8 @@
   display: flex;
   width: 100%;
   overflow: hidden;
+  align-items: center;
+  gap: 2rem;
 }
 
 .skills-text-div {
@@ -15,7 +17,15 @@
   margin-bottom: 30px;
 }
 
+.skills-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .skills-image-div > img {
+  display: block;
+  width: clamp(320px, 36vw, 640px);
   max-width: 100%;
   height: auto;
 }
@@ -45,6 +55,7 @@
   }
   .skills-main-div {
     flex-direction: column;
+    gap: 1.5rem;
   }
   .skills-text-div {
     margin-left: 0px;
@@ -58,7 +69,10 @@
     text-align: center;
   }
   .skills-image-div {
-    /* display: none; */
     order: 2;
+  }
+
+  .skills-image-div > img {
+    width: min(100%, 360px);
   }
 }

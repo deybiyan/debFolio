@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -8,9 +8,20 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import blackDp from "../../assets/images/blackdp.png";
+import whiteDp from "../../assets/images/whitedp.png";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+
+  useEffect(() => {
+    // Preload both theme images so toggling does not wait on image decode/load.
+    [blackDp, whiteDp].forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -22,11 +33,7 @@ export default function Greeting() {
             <div>
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
-              </h1>
+              ></h1>
               <p
                 className={
                   isDark
@@ -38,28 +45,33 @@ export default function Greeting() {
               </p>
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
-              <div className="button-greeting-div">
+              <div
+                className={
+                  isDark
+                    ? "dark-mode button-greeting-div"
+                    : "button-greeting-div"
+                }
+              >
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
-                  <a
-                    href={require("./resume.pdf")}
+                  <Button
+                    text="Download my resume"
+                    href={require("./DMO_CV_2026.pdf")}
                     download="Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
+                  />
                 )}
               </div>
             </div>
           </div>
           <div className="greeting-image-div">
-            {illustration.animated ? (
+            {/* {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
+            ) : ( */}
+
+            {isDark ? (
+              <img alt="display photo" src={blackDp} loading="eager"></img>
             ) : (
-              <img
-                alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
-              ></img>
+              <img alt="display photo" src={whiteDp} loading="eager"></img>
             )}
           </div>
         </div>
