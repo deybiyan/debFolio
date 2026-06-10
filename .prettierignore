@@ -1,4 +1,8 @@
 src/serviceWorker.js
 package-lock.json
 src/assets/lottie
+.vscode
+build
+public/profile.json
+public/blogs.json
 

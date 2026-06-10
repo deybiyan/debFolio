@@ -22,10 +22,10 @@ const illustration = {
 const greeting = {
   username: "daveIan",
   title: "Hi, I'm Dave Ian",
-  subTitle: 
-    "Solution-Driven Software Engineer 🚀 with experience designing, developing, and supporting enterprise desktop and web applications."
-  ,
-  subtext: "Skilled in C# .NET, ASP.NET, WPF, SQL Server, JavaScript, React, and modern web technologies, with a strong focus on building reliable, scalable, and user-friendly solutions.",
+  subTitle:
+    "Solution-Driven Software Engineer 🚀 with experience designing, developing, and supporting enterprise desktop and web applications.",
+  subtext:
+    "Skilled in C# .NET, ASP.NET, WPF, SQL Server, JavaScript, React, and modern web technologies, with a strong focus on building reliable, scalable, and user-friendly solutions.",
 
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -51,16 +51,15 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Tech Stack",
-  subTitle: "Driven by curiosity and a passion for software engineering, I enjoy working across the entire development stack—from crafting intuitive user interfaces to building reliable backend systems.",
+  subTitle:
+    "Driven by curiosity and a passion for software engineering, I enjoy working across the entire development stack—from crafting intuitive user interfaces to building reliable backend systems.",
   skills: [
+    emoji("⚡ Develop modern, responsive, and accessible user experiences"),
     emoji(
-      "⚡ Develop modern, responsive, and accessible user experiences"
+      "⚡ Build APIs and backend services with maintainability and performance in mind"
     ),
-    emoji("⚡ Build APIs and backend services with maintainability and performance in mind"),
+    emoji("⚡ Work with cloud services, databases, and deployment pipelines"),
     emoji(
-      "⚡ Work with cloud services, databases, and deployment pipelines"
-    ),
-     emoji(
       "⚡ Explore emerging technologies and best practices to deliver better solutions"
     )
   ],
@@ -71,7 +70,8 @@ https://fontawesome.com/icons?d=gallery */
   softwareSkills: [
     {
       skillName: "Copilot",
-      iconUrl:"https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/github-copilot/default.svg"
+      iconUrl:
+        "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/github-copilot/default.svg"
     },
     {
       skillName: "Ollama",
@@ -100,11 +100,13 @@ https://fontawesome.com/icons?d=gallery */
     },
     {
       skillName: "GraphQL",
-      iconUrl: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/graphql/default.svg"
+      iconUrl:
+        "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/graphql/default.svg"
     },
     {
       skillName: "DatoCMS",
-      iconUrl: "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/datocms/default.svg"
+      iconUrl:
+        "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/datocms/default.svg"
     },
     {
       skillName: "Node.js",
@@ -255,16 +257,19 @@ const openSource = {
 
 const bigProjects = {
   title: "Projects",
-  subtitle: "A collection of projects I've designed, developed, and contributed to throughout my journey as a software engineer." ,
-  subtext: "Each project represents a unique challenge, an opportunity to learn, and a chance to build solutions that deliver real value to users and businesses.",
+  subtitle:
+    "A collection of projects I've designed, developed, and contributed to throughout my journey as a software engineer.",
+  subtext:
+    "Each project represents a unique challenge, an opportunity to learn, and a chance to build solutions that deliver real value to users and businesses.",
   projects: [
     {
       image: require("./assets/images/fdmhub.gif"),
       projectName: "FDM Hub",
-      projectDesc: "FDM Hub is a full-stack AI-powered diagnostic platform with an ASP.NET Core (.NET 10) API and a Next.js TypeScript frontend that ingests AMS workspace artifacts, stores ticket snapshot data, and evaluates compatibility rules against versioned matrix requirements.",
+      projectDesc:
+        "FDM Hub is a full-stack AI-powered diagnostic platform with an ASP.NET Core (.NET 10) API and a Next.js TypeScript frontend that ingests AMS workspace artifacts, stores ticket snapshot data, and evaluates compatibility rules against versioned matrix requirements.",
       footerLink: [
         {
-          name: "Internal Company Website",
+          name: "Internal Company Website"
           // url: "http://fdmhub.com/" --- IGNORE ---
         }
         //  you can add extra buttons here.
@@ -273,7 +278,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Persol.gif"),
       projectName: "Persol Outsourcing Website",
-      projectDesc: "PERSOL Outsourcing is a leading outsourcing and managed services provider that delivers customer experience, corporate support, and technical solutions. By integrating people, processes, and technology, they help businesses streamline operations, enhance service delivery, and scale efficiently across diverse industries.",
+      projectDesc:
+        "PERSOL Outsourcing is a leading outsourcing and managed services provider that delivers customer experience, corporate support, and technical solutions. By integrating people, processes, and technology, they help businesses streamline operations, enhance service delivery, and scale efficiently across diverse industries.",
       footerLink: [
         {
           name: "Visit Website",
@@ -284,10 +290,11 @@ const bigProjects = {
     {
       image: require("./assets/images/tdc.gif"),
       projectName: "TREX Data Collector",
-      projectDesc: "Windows Forms desktop application (targeting .NET 10) that collects and exports configuration data from AMS Trex Device Communicator, integrating with devices over a network and writing the results to structured output files. ",
+      projectDesc:
+        "Windows Forms desktop application (targeting .NET 10) that collects and exports configuration data from AMS Trex Device Communicator, integrating with devices over a network and writing the results to structured output files. ",
       footerLink: [
         {
-          name: "Internal Company Tool",
+          name: "Internal Company Tool"
           // url: "http://nextu.se/" --- IGNORE ---
         }
       ]
@@ -424,8 +431,7 @@ const resumeSection = {
 
 const contactInfo = {
   title: emoji("Let's Connect! ☎️"),
-  subtitle:
-    "Let's build something great together.",
+  subtitle: "Let's build something great together.",
   subtext:
     "My inbox is always open for discussions, collaborations, and opportunities.",
   number: "+63-967-319-0974",
