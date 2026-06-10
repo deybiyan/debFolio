@@ -17,34 +17,6 @@ const ERR = {
     "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
 };
 
-// function writeGithubFallback() {
-//   if (fs.existsSync("./public/profile.json")) {
-//     console.log("using existing file at public/profile.json as fallback");
-//     return;
-//   }
-
-//   const emptyGithubProfile = JSON.stringify({
-//     data: {
-//       user: {
-//         id: GITHUB_USERNAME || "fallback-user",
-//         name: GITHUB_USERNAME || "",
-//         bio: "",
-//         avatarUrl: "",
-//         location: "",
-//         pinnedItems: {
-//           totalCount: 0,
-//           edges: []
-//         }
-//       }
-//     }
-//   });
-
-//   fs.writeFile("./public/profile.json", emptyGithubProfile, function (err) {
-//     if (err) return console.log(err);
-//     console.log("saved fallback file to public/profile.json");
-//   });
-// }
-
 function writeMediumFallback() {
   const emptyMediumFeed = JSON.stringify({items: []});
   fs.writeFile("./public/blogs.json", emptyMediumFeed, function (err) {
