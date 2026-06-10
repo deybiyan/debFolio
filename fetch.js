@@ -16,6 +16,15 @@ const ERR = {
   requestFailedMedium:
     "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
 };
+
+function writeMediumFallback() {
+  const emptyMediumFeed = JSON.stringify({items: []});
+  fs.writeFile("./public/blogs.json", emptyMediumFeed, function (err) {
+    if (err) return console.log(err);
+    console.log("saved fallback file to public/blogs.json");
+  });
+}
+
 if (USE_GITHUB_DATA === "true") {
   if (GITHUB_USERNAME === undefined) {
     throw new Error(ERR.noUserName);
@@ -108,7 +117,9 @@ if (MEDIUM_USERNAME !== undefined) {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      console.warn(ERR.requestFailedMedium);
+      writeMediumFallback();
+      return;
     }
 
     res.on("data", d => {
@@ -123,7 +134,11 @@ if (MEDIUM_USERNAME !== undefined) {
   });
 
   req.on("error", error => {
-    throw error;
+    console.warn(
+      `${ERR.requestFailedMedium} Falling back to an empty blogs feed.`
+    );
+    console.warn(error);
+    writeMediumFallback();
   });
 
   req.end();
