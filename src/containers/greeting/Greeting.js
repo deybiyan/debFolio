@@ -33,7 +33,9 @@ export default function Greeting() {
             <div>
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              ></h1>
+              >
+                {greeting.title}
+              </h1>
               <div
                 className={
                   isDark
@@ -65,14 +67,16 @@ export default function Greeting() {
             </div>
           </div>
           <div className="greeting-image-div">
-            {/* {illustration.animated ? (
+            {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
-            ) : ( */}
-
-            {isDark ? (
-              <img alt="display photo" src={blackDp} loading="eager"></img>
             ) : (
-              <img alt="display photo" src={whiteDp} loading="eager"></img>
+              <>
+                {isDark ? (
+                  <img alt="display photo" src={blackDp} loading="eager"></img>
+                ) : (
+                  <img alt="display photo" src={whiteDp} loading="eager"></img>
+                )}
+              </>
             )}
           </div>
         </div>
