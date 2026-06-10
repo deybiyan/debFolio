@@ -1,6 +1,5 @@
 import React, {useContext, useEffect} from "react";
 import {Fade} from "react-reveal";
-import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
@@ -72,9 +71,9 @@ export default function Greeting() {
             ) : (
               <>
                 {isDark ? (
-                  <img alt="display photo" src={blackDp} loading="eager"></img>
+                  <img alt="profile portrait" src={blackDp} loading="eager" />
                 ) : (
-                  <img alt="display photo" src={whiteDp} loading="eager"></img>
+                  <img alt="profile portrait" src={whiteDp} loading="eager" />
                 )}
               </>
             )}
