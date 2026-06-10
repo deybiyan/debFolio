@@ -23,8 +23,10 @@ const greeting = {
   username: "daveIan",
   title: "Hi, I'm Dave Ian",
   subTitle: 
-    "Solution-Driven Software Engineer 🚀 with experience designing, developing, and supporting enterprise desktop and web applications. Skilled in C#, .NET, ASP.NET MVC, WPF, SQL Server, JavaScript, React, and modern web technologies, with a strong focus on building reliable, scalable, and user-friendly solutions."
+    "Solution-Driven Software Engineer 🚀 with experience designing, developing, and supporting enterprise desktop and web applications."
   ,
+  subtext: "Skilled in C# .NET, ASP.NET, WPF, SQL Server, JavaScript, React, and modern web technologies, with a strong focus on building reliable, scalable, and user-friendly solutions.",
+
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -280,7 +282,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/tdc.gif"),
       projectName: "TREX Data Collector",
       projectDesc: "Windows Forms desktop application (targeting .NET 10) that collects and exports configuration data from AMS Trex Device Communicator, integrating with devices over a network and writing the results to structured output files. ",
       footerLink: [

@@ -34,15 +34,16 @@ export default function Greeting() {
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               ></h1>
-              <p
+              <div
                 className={
                   isDark
                     ? "dark-mode greeting-text-p"
                     : "greeting-text-p subTitle"
                 }
               >
-                {greeting.subTitle}
-              </p>
+                <p>{greeting.subTitle}</p>
+                <p>{greeting.subtext}</p>
+              </div>
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
               <div
