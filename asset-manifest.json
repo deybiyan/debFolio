@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/debFolio/static/css/main.0e58d14d.css",
+    "main.js": "/debFolio/static/js/main.e0154a9c.js",
+    "static/css/487.e0238703.chunk.css": "/debFolio/static/css/487.e0238703.chunk.css",
+    "static/js/487.9779af71.chunk.js": "/debFolio/static/js/487.9779af71.chunk.js",
+    "static/css/990.c6a7ee28.chunk.css": "/debFolio/static/css/990.c6a7ee28.chunk.css",
+    "static/js/990.3ff8cbd3.chunk.js": "/debFolio/static/js/990.3ff8cbd3.chunk.js",
+    "static/media/Persol.gif": "/debFolio/static/media/Persol.cc85cac84ac3ddbc0118.gif",
+    "static/media/fdmhub.gif": "/debFolio/static/media/fdmhub.6287756276b62e8fe0aa.gif",
+    "static/media/tdc.gif": "/debFolio/static/media/tdc.8139a4bb6280228a7234.gif",
+    "static/media/contact-me.gif": "/debFolio/static/media/contact-me.4b7b50c22139c5692a0c.gif",
+    "static/media/WorkingMan.gif": "/debFolio/static/media/WorkingMan.d38b1f52938e7c444a5b.gif",
+    "static/media/blackdp.png": "/debFolio/static/media/blackdp.efda408308f83b6fe74f.png",
+    "static/media/whitedp.png": "/debFolio/static/media/whitedp.c372e08ec42b693bf1d5.png",
+    "static/media/stanfordLogo.png": "/debFolio/static/media/stanfordLogo.5a8e3a0a00949c93a9b8.png",
+    "static/media/harvardLogo.png": "/debFolio/static/media/harvardLogo.542dab89bfb35b7f5c0d.png",
+    "static/media/Montserrat-Regular.ttf": "/debFolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/DMO_CV_2026.pdf": "/debFolio/static/media/DMO_CV_2026.2c0d1198110ec9cf3328.pdf",
+    "static/media/Agustina.woff": "/debFolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/quoraLogo.png": "/debFolio/static/media/quoraLogo.85eb29f4d52320c8ed99.png",
+    "static/media/googleAssistantLogo.webp": "/debFolio/static/media/googleAssistantLogo.f720c71652579588524a.webp",
+    "static/media/airbnbLogo.png": "/debFolio/static/media/airbnbLogo.e8497507db673acd3991.png",
+    "static/media/facebookLogo.png": "/debFolio/static/media/facebookLogo.f46d68b24e9b4f73ee8b.png",
+    "static/media/codeInLogo.webp": "/debFolio/static/media/codeInLogo.e41a71d512efeda2a55c.webp",
+    "static/media/skill.svg": "/debFolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
+    "static/media/pwaLogo.webp": "/debFolio/static/media/pwaLogo.8bf2293da0ca66249e37.webp",
+    "index.html": "/debFolio/index.html",
+    "static/media/talksCardBack.svg": "/debFolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
+    "main.0e58d14d.css.map": "/debFolio/static/css/main.0e58d14d.css.map",
+    "main.e0154a9c.js.map": "/debFolio/static/js/main.e0154a9c.js.map",
+    "487.e0238703.chunk.css.map": "/debFolio/static/css/487.e0238703.chunk.css.map",
+    "487.9779af71.chunk.js.map": "/debFolio/static/js/487.9779af71.chunk.js.map",
+    "990.c6a7ee28.chunk.css.map": "/debFolio/static/css/990.c6a7ee28.chunk.css.map",
+    "990.3ff8cbd3.chunk.js.map": "/debFolio/static/js/990.3ff8cbd3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e58d14d.css",
+    "static/js/main.e0154a9c.js"
+  ]
+}
