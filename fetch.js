@@ -17,6 +17,34 @@ const ERR = {
     "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
 };
 
+function writeGithubFallback() {
+  if (fs.existsSync("./public/profile.json")) {
+    console.log("using existing file at public/profile.json as fallback");
+    return;
+  }
+
+  const emptyGithubProfile = JSON.stringify({
+    data: {
+      user: {
+        id: GITHUB_USERNAME || "fallback-user",
+        name: GITHUB_USERNAME || "",
+        bio: "",
+        avatarUrl: "",
+        location: "",
+        pinnedItems: {
+          totalCount: 0,
+          edges: []
+        }
+      }
+    }
+  });
+
+  fs.writeFile("./public/profile.json", emptyGithubProfile, function (err) {
+    if (err) return console.log(err);
+    console.log("saved fallback file to public/profile.json");
+  });
+}
+
 function writeMediumFallback() {
   const emptyMediumFeed = JSON.stringify({items: []});
   fs.writeFile("./public/blogs.json", emptyMediumFeed, function (err) {
@@ -71,17 +99,22 @@ if (USE_GITHUB_DATA === "true") {
     port: 443,
     method: "POST",
     headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`,
       "User-Agent": "Node"
     }
   };
+
+  if (GITHUB_TOKEN) {
+    default_options.headers.Authorization = `Bearer ${GITHUB_TOKEN}`;
+  }
 
   const req = https.request(default_options, res => {
     let data = "";
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestFailed);
+      console.warn(ERR.requestFailed);
+      writeGithubFallback();
+      return;
     }
 
     res.on("data", d => {
@@ -96,7 +129,9 @@ if (USE_GITHUB_DATA === "true") {
   });
 
   req.on("error", error => {
-    throw error;
+    console.warn(`${ERR.requestFailed} Falling back to profile.json fallback.`);
+    console.warn(error);
+    writeGithubFallback();
   });
 
   req.write(data);
