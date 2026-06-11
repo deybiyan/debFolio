@@ -6,11 +6,10 @@ import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 // Splash Screen
 
-// Video 
+// Video
 import fdmhubVideo from "./assets/images/fdmhub.mp4";
 import persolVideo from "./assets/images/persol.mp4";
 import tdcVideo from "./assets/images/tdc.mp4";
-
 
 const splashScreen = {
   enabled: false, // set false to disable splash screen
