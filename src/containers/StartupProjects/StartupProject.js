@@ -87,13 +87,22 @@ export default function StartupProject() {
                   onClick={() => openProjectModal(project)}
                   onKeyDown={event => handleCardKeyDown(event, project)}
                 >
-                  {project.image ? (
-                    <div className="project-image">
-                      <img
+                  {project.video ? (
+                    <div className="project-video-wrap">
+                      {/* <img
                         src={project.image}
                         alt={project.projectName}
                         className="project-card-image"
-                      ></img>
+                      ></img> */}
+                      <video
+                        className="project-card-video"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src={project.video} type="video/mp4" />
+                      </video>
                     </div>
                   ) : null}
                   <div className="project-detail">

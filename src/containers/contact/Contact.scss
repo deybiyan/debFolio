@@ -57,6 +57,18 @@
   margin: 0;
 }
 
+.contact-image-div > div {
+  width: min(100%, 420px);
+  max-width: 100%;
+}
+
+.contact-image-div svg,
+.contact-image-div canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
 .contact-image-div {
   display: flex;
   justify-content: center;
@@ -102,6 +114,10 @@
   }
 
   .contact-image-div > img {
+    width: min(100%, 320px);
+  }
+
+  .contact-image-div > div {
     width: min(100%, 320px);
   }
 }

@@ -263,7 +263,8 @@ const bigProjects = {
     "Each project represents a unique challenge, an opportunity to learn, and a chance to build solutions that deliver real value to users and businesses.",
   projects: [
     {
-      image: require("./assets/images/fdmhub.gif"),
+      // image: require("./assets/images/fdmhub.gif"),
+      video: require("./assets/images/fdmhub.mp4"),
       projectName: "FDM Hub",
       projectDesc:
         "FDM Hub is a full-stack AI-powered diagnostic platform with an ASP.NET Core (.NET 10) API and a Next.js TypeScript frontend that ingests AMS workspace artifacts, stores ticket snapshot data, and evaluates compatibility rules against versioned matrix requirements.",
@@ -276,7 +277,8 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/persol.gif"),
+      // image: require("./assets/images/persol.gif"),
+      video: require("./assets/images/persol.mp4"),
       projectName: "Persol Outsourcing Website",
       projectDesc:
         "PERSOL Outsourcing is a leading outsourcing and managed services provider that delivers customer experience, corporate support, and technical solutions. By integrating people, processes, and technology, they help businesses streamline operations, enhance service delivery, and scale efficiently across diverse industries.",
@@ -288,7 +290,8 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/tdc.gif"),
+      // image: require("./assets/images/tdc.gif"),
+      video: require("./assets/images/tdc.mp4"),
       projectName: "TREX Data Collector",
       projectDesc:
         "Windows Forms desktop application (targeting .NET 10) that collects and exports configuration data from AMS Trex Device Communicator, integrating with devices over a network and writing the results to structured output files. ",
