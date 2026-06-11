@@ -16,7 +16,7 @@ const splashScreen = {
 // Summary And Greeting Section
 
 const illustration = {
-  animated: false // Set true to use animated Lottie illustrations
+  animated: true // Set true to use animated Lottie illustrations
 };
 
 const greeting = {

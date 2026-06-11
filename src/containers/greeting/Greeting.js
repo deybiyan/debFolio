@@ -66,9 +66,9 @@ export default function Greeting() {
             </div>
           </div>
           <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
+                {/* {illustration.animated ? (
+                  <DisplayLottie animationData={landingPerson} />
+                ) : ( */}
               <>
                 {isDark ? (
                   <img alt="profile portrait" src={blackDp} loading="eager" />
@@ -76,7 +76,7 @@ export default function Greeting() {
                   <img alt="profile portrait" src={whiteDp} loading="eager" />
                 )}
               </>
-            )}
+            {/* )} */}
           </div>
         </div>
       </div>
