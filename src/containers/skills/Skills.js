@@ -20,10 +20,13 @@ export default function Skills() {
             {illustration.animated ? (
               <DisplayLottie animationData={codingPerson} />
             ) : (
-              <img
+              <video
                 alt="Working Man Illustration"
-                src={require("../../assets/images/WorkingMan.gif")}
-              ></img>
+                src={require("../../assets/images/WorkingMan.webm")}
+                autoPlay
+                loop
+                muted
+              ></video>
             )}
           </div>
         </Fade>
