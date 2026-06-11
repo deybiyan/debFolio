@@ -166,13 +166,17 @@ export default function StartupProject() {
                   x
                 </button>
 
-                {selectedProject.image ? (
-                  <div className="project-modal-image-wrap">
-                    <img
-                      src={selectedProject.image}
-                      alt={selectedProject.projectName}
-                      className="project-modal-image"
-                    />
+                {selectedProject.video ? (
+                  <div className="project-modal-video-wrap">
+                    <video
+                      className="project-modal-video"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src={selectedProject.video} type="video/mp4" />
+                    </video>
                   </div>
                 ) : null}
 
