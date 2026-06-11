@@ -4,8 +4,13 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-
 // Splash Screen
+
+// Video 
+import fdmhubVideo from "./assets/images/fdmhub.mp4";
+import persolVideo from "./assets/images/persol.mp4";
+import tdcVideo from "./assets/images/tdc.mp4";
+
 
 const splashScreen = {
   enabled: false, // set false to disable splash screen
@@ -264,7 +269,8 @@ const bigProjects = {
   projects: [
     {
       // image: require("./assets/images/fdmhub.gif"),
-      video: require("./assets/images/fdmhub.mp4"),
+      // video: require("./assets/images/fdmhub.mp4"),
+      video: fdmhubVideo, // Alternative way to reference the video in public folder
       projectName: "FDM Hub",
       projectDesc:
         "FDM Hub is a full-stack AI-powered diagnostic platform with an ASP.NET Core (.NET 10) API and a Next.js TypeScript frontend that ingests AMS workspace artifacts, stores ticket snapshot data, and evaluates compatibility rules against versioned matrix requirements.",
@@ -278,7 +284,8 @@ const bigProjects = {
     },
     {
       // image: require("./assets/images/persol.gif"),
-      video: require("./assets/images/persol.mp4"),
+      // video: require("./assets/images/persol.mp4"),
+      video: persolVideo, // Alternative way to reference the video in public folder
       projectName: "Persol Outsourcing Website",
       projectDesc:
         "PERSOL Outsourcing is a leading outsourcing and managed services provider that delivers customer experience, corporate support, and technical solutions. By integrating people, processes, and technology, they help businesses streamline operations, enhance service delivery, and scale efficiently across diverse industries.",
@@ -291,7 +298,8 @@ const bigProjects = {
     },
     {
       // image: require("./assets/images/tdc.gif"),
-      video: require("./assets/images/tdc.mp4"),
+      // video: require("./assets/images/tdc.mp4"),
+      video: tdcVideo, // Alternative way to reference the video in public folder
       projectName: "TREX Data Collector",
       projectDesc:
         "Windows Forms desktop application (targeting .NET 10) that collects and exports configuration data from AMS Trex Device Communicator, integrating with devices over a network and writing the results to structured output files. ",
