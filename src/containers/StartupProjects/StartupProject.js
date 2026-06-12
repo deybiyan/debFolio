@@ -161,17 +161,17 @@ export default function StartupProject() {
                   x
                 </button>
 
-                {selectedProject.video ? (
-                  <div className="project-modal-video-wrap">
-                    <video
-                      className="project-modal-video"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
-                      <source src={selectedProject.video} type="video/mp4" />
-                    </video>
+                {selectedProject.image ? (
+                  <div className="project-modal-image-wrap">
+                    {illustration.animated ? (
+                      <DisplayLottie animationData={selectedProject.image} />
+                    ) : (
+                      <img
+                        alt={`${selectedProject.projectName} screenshot`}
+                        src={selectedProject.image}
+                        className="project-card-image"
+                      ></img>
+                    )}
                   </div>
                 ) : null}
 
