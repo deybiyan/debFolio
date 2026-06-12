@@ -4,19 +4,17 @@
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+
+// Lottie
+import fdmhubAnimation from "./assets/lottie/fdmhub.json";
+import persolAnimation from "./assets/lottie/persol.json";
+import tdcAnimation from "./assets/lottie/tdc.json";
+
+const illustration = {
+  animated: true // Set true to use animated Lottie illustrations
+};
+
 // Splash Screen
-
-// Video
-import fdmhubVideo from "./assets/images/fdmhub.mp4";
-import persolVideo from "./assets/images/persol.mp4";
-import tdcVideo from "./assets/images/tdc.mp4";
-
-// Lottie 
-import DisplayLottie from "./components/displayLottie/DisplayLottie";
-// import {illustration} from "../../portfolio";
-import fdmhub from "./assets/lottie/fdmhub.json";
-
-
 const splashScreen = {
   enabled: false, // set false to disable splash screen
   animation: splashAnimation,
@@ -24,11 +22,6 @@ const splashScreen = {
 };
 
 // Summary And Greeting Section
-
-const illustration = {
-  animated: true // Set true to use animated Lottie illustrations
-};
-
 const greeting = {
   username: "daveIan",
   title: "Hi, I'm Dave Ian",
@@ -43,7 +36,6 @@ const greeting = {
 };
 
 // Social Media Links
-
 const socialMediaLinks = {
   github: "https://github.com/deybiyan",
   linkedin: "https://www.linkedin.com/in/dave-ian-olicia/",
@@ -58,7 +50,6 @@ const socialMediaLinks = {
 };
 
 // Skills Section
-
 const skillsSection = {
   title: "Tech Stack",
   subTitle:
@@ -273,7 +264,7 @@ const bigProjects = {
     "Each project represents a unique challenge, an opportunity to learn, and a chance to build solutions that deliver real value to users and businesses.",
   projects: [
     {
-      image: fdmhub, // Lottie animation for FDM Hub project
+      image: fdmhubAnimation, // Lottie animation for FDM Hub project
       // video: require("./assets/images/fdmhub.mp4"),
       // video: fdmhubVideo, // Alternative way to reference the video in public folder
       projectName: "FDM Hub",
@@ -288,9 +279,9 @@ const bigProjects = {
       ]
     },
     {
-      // image: require("./assets/images/persol.gif"),
+      image: persolAnimation,
       // video: require("./assets/images/persol.mp4"),
-      video: persolVideo, // Alternative way to reference the video in public folder
+      // video: persolVideo, // Alternative way to reference the video in public folder
       projectName: "Persol Outsourcing Website",
       projectDesc:
         "PERSOL Outsourcing is a leading outsourcing and managed services provider that delivers customer experience, corporate support, and technical solutions. By integrating people, processes, and technology, they help businesses streamline operations, enhance service delivery, and scale efficiently across diverse industries.",
@@ -302,9 +293,9 @@ const bigProjects = {
       ]
     },
     {
-      // image: require("./assets/images/tdc.gif"),
+      image: tdcAnimation,
       // video: require("./assets/images/tdc.mp4"),
-      video: tdcVideo, // Alternative way to reference the video in public folder
+      // video: tdcVideo, // Alternative way to reference the video in public folder
       projectName: "TREX Data Collector",
       projectDesc:
         "Windows Forms desktop application (targeting .NET 10) that collects and exports configuration data from AMS Trex Device Communicator, integrating with devices over a network and writing the results to structured output files. ",

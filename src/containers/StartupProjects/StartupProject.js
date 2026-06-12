@@ -5,7 +5,6 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import {illustration} from "../../portfolio";
-import fdmhub from "../../assets/lottie/fdmhub.json";
 
 export default function StartupProject() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -90,25 +89,6 @@ export default function StartupProject() {
                   onClick={() => openProjectModal(project)}
                   onKeyDown={event => handleCardKeyDown(event, project)}
                 >
-                  {/* {project.video ? (
-                    <div className="project-video-wrap">
-                      {/* <img
-                        src={project.image}
-                        alt={project.projectName}
-                        className="project-card-image"
-                      ></img> */}
-                      {/* <video
-                        className="project-card-video"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                      >
-                        <source src={project.video} type="video/mp4" />
-                      </video> */}
-                    {/* </div> */}
-                  {/* ) : null}  */}
-
                   <div className="project-image-wrap">
                     {illustration.animated ? (
                       <DisplayLottie animationData={project.image} />
