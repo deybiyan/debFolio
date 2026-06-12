@@ -92,6 +92,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "devicon-dotnetcore-plain"
     },
     {
+      skillName: "Swagger",
+      fontAwesomeClassname: "devicon-swagger-plain"
+    },
+    {
       skillName: "Entity Framework",
       fontAwesomeClassname: "devicon-entityframeworkcore-plain"
     },
