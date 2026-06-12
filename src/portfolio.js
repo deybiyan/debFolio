@@ -11,6 +11,12 @@ import fdmhubVideo from "./assets/images/fdmhub.mp4";
 import persolVideo from "./assets/images/persol.mp4";
 import tdcVideo from "./assets/images/tdc.mp4";
 
+// Lottie 
+import DisplayLottie from "./components/displayLottie/DisplayLottie";
+// import {illustration} from "../../portfolio";
+import fdmhub from "./assets/lottie/fdmhub.json";
+
+
 const splashScreen = {
   enabled: false, // set false to disable splash screen
   animation: splashAnimation,
@@ -267,9 +273,9 @@ const bigProjects = {
     "Each project represents a unique challenge, an opportunity to learn, and a chance to build solutions that deliver real value to users and businesses.",
   projects: [
     {
-      // image: require("./assets/images/fdmhub.gif"),
+      image: fdmhub, // Lottie animation for FDM Hub project
       // video: require("./assets/images/fdmhub.mp4"),
-      video: fdmhubVideo, // Alternative way to reference the video in public folder
+      // video: fdmhubVideo, // Alternative way to reference the video in public folder
       projectName: "FDM Hub",
       projectDesc:
         "FDM Hub is a full-stack AI-powered diagnostic platform with an ASP.NET Core (.NET 10) API and a Next.js TypeScript frontend that ingests AMS workspace artifacts, stores ticket snapshot data, and evaluates compatibility rules against versioned matrix requirements.",
